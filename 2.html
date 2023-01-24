@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+       Adınız: <input type="text" name="txtName" sytle="width:200px; text-align:right;" maxlength="30">
+       <br/><br/> Soyadınız: <input type="text" surname="txtSurname" sytle="width:200px; text-align:right;" maxlength="30">
+       <br/><br/> Cinsiyetiniz: 
+       <input type="radio" name="rdCinsiyet" value="E">Erkek
+       <input type="radio" name="rdCinsiyet" value="K">Kadın
+        <!--ya kadını ya da erkeği seçebilecek, birini seçince diğeri boş kalıyor. Bunun sebebi de iki inputta da name="rdCinsiyet" ataması yaptık. İkisinden yapılan seçim rdCinsiyete atanıyor-->
+
+        <br/><br/> Mesleğiniz: 
+        <select name="drpMeslek">
+            <option value="1">Mühendis</option>
+            <option value="2">Doktor</option>
+            <option value="3">Avukat</option>
+            <option value="4">Öğretmen</option>
+            <option value="5">Polis</option>
+        </select>
+        <br/><br/> Adresiniz:  <textarea name="txtAdress" cols="20" rows="5" ></textarea>
+        <br/><br/> Daire Türü: 
+        <input type="checkbox" name="chkDaireTuru" value="1">1+1  
+        <input type="checkbox" name="chkDaireTuru" value="2">2+1
+        <input type="checkbox" name="chkDaireTuru" value="3">3+1
+        <input type="checkbox" name="chkDaireTuru" value="4">4+1
+
+    </form>
+</body>
+</html>
