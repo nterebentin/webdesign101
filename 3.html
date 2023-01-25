@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form1">
+        <center>
+        <table border="1" >
+            <!--
+                autocomplete="off" o elementin tarayıcı tarafından otomatik hatırlanmasını engeller.
+            style="width:xxx" kullanımı tek element için stil uygular, css ile daha genel uygulayacağız.
+            -->
+            <tr>
+                <td>Adınız</td>
+                <td><input autocomplete="off" type="text" name="txtName" sytle="width: fit-content;text-align: right" maxlength="35"></td>
+            </tr>
+
+            <tr>
+            <td>Soyadınız</td>
+            <td><input type="text" surname="txtSurname" sytle="width: 200px;text-align: right" maxlength="35"></td>
+            </tr>
+
+            <tr>
+                <td>Kurs</td>
+                <td>
+                    <!--
+                        diabled attribute'u ilgili alanın değiştirilmesini engeller.
+                        value attribute'u alanın değerini verir, yani burada textbox'ın içini doldurur.
+                    -->
+                    <input disabled autocomplete="off" type="text" name="txtKurs" style="width: 200px;text-align: right" maxlength="50" value="İBB 100 Kadın Yazılımcı">
+                </td>
+            <tr>
+            <td>Cinsiyetiniz</td>
+            <td>
+                <input type="radio" name="rdCinsiyet" value="E">Erkek
+                <input type="radio" name="rdCinsiyet" value="K">Kadın
+             </td>
+            <!--ya kadını ya da erkeği seçebilecek, birini seçince diğeri boş kalıyor. Bunun sebebi de iki inputta da name="rdCinsiyet" ataması yaptık. İkisinden yapılan seçim rdCinsiyete atanıyor-->
+            </tr>   
+            <tr>
+            <td>Mesleğiniz</td>
+                <td>
+                    <select name="drpMeslek" style="width:100%">
+                        <option value="0">Lütfen seçiniz...</option>
+                        <option value="1">Mühendis</option>
+                        <option value="2">Doktor</option>
+                        <option value="3">Avukat</option>
+                        <option value="4">Öğretmen</option>
+                        <option value="5">Polis</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Adresiniz</td>
+                <td>
+                    <textarea name="txtAdress" cols="25" rows="5" ></textarea>
+                </td>    
+            </tr>
+            <tr>
+                <td>Daire Türü</td>
+                <td> 
+                    <input type="checkbox" name="chkDaireTuru" value="1">1+1  
+                    <input type="checkbox" name="chkDaireTuru" value="2">2+1
+                    <input type="checkbox" name="chkDaireTuru" value="3">3+1
+                    <input type="checkbox" name="chkDaireTuru" value="4">4+1
+                </td>
+            </tr>
+            
+            <tr>
+            <!--checkbox'ı multiple dropdown'a çevirelim-->
+                <td>Daire Türü (Multiple Dropdown)</td>
+                <td>
+                    <select multiple name="drpDaireTuru" size="4" style="width: 75px; text-align:right">
+                        <option value="1">1+1</option>
+                        <option value="2">2+1</option>
+                        <option value="3">3+1</option>
+                        <option value="4">4+1</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+            <input type="button" name="btnSubmit" value="Kaydet">
+                </td>
+            </tr>
+        </table>
+    </center>
+    </form>
+</body>
+</html>

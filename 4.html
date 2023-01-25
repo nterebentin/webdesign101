@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo Örneği</title>
+</head>
+<body>
+    <!-- 
+        tr yani table row yeni satır açar
+        td yani table data satır içinde yeni hücre açar. tdleri yanyana açtıkça yanyana hücreler açar
+        border attribute'u kenarlık veya çerçeve için kullanılır. 1 ise çerçeve var, 0 ise çerçeve yok.
+    -->
+    <table border="1" width="50%">
+        <tr>
+            <th width="33%">Table Header 1.1</th>
+            <th width="33%">Table Header 1.2</th>
+            <th width="34%">Table Header 1.3</th>
+        </tr>
+        <tr>
+            <td>Table Data 2.1</td>
+            <td>Table Data 2.2</td>
+            <td>Table Data 2.3</td>
+        </tr>
+        <tr>
+            <!--
+                colspan satırdaki hücreleri birleştirme, ilgili sütunun kaç sütun kapladığını belirtme anlamına gelir.
+                align da hücre içindeki hizalamayı sağlar.
+            -->
+            <td colspan="3" align="center"><b>Table Data 3.1</b></td>
+        </tr>
+    </table>
+</body>
+</html>

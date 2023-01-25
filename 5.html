@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Giriş 1</title>
+
+    <script language="JavaScript">
+        function loadMe()
+        {
+            window.alert("Hoşgeldiniz!");
+        }
+
+        function clickME()
+        {
+            // var ve let değişken tanımlamaya yarayan JavaScript komutlarıdır.
+            var myTC = document.form1.txtTC.value;
+            window.alert("Benim TC numaram" + myTC); // string birleştirme
+            // buna merge veya concatenate işlemi denilir
+        }
+
+        function changeCity()
+        {
+            var cityID = document.form1.cmbCity.value
+            window.location.href="3.html?ID=" + cityID;
+            // ?ID=5&X=2&name=onur...
+            //Gönderildiği sayfada Request.QueryString["ID"] metodu ile okunur
+
+        }
+
+        function toplamHesapla()
+        {
+            dblFiyat = document.form1.dblFiyat.value;
+            dblKDV = document.form1.dblKDV.value;
+            document.form1.dblToplam.value = parseInt(dblFiyat) * (parseInt(dblKDV+100)/100);
+        }
+        
+    </script>
+
+</head>
+<body onload="javascript:loadMe();">
+    <center>
+        <form name="form1">
+            T.C. No <input type="text" name="txtTC" size="20" maxlength="11">
+            <br/><br/>
+            Şehir
+            <select name="cmbCity" style="width:200px;" onchange="javascript:changeCity();">
+                <option value="0">Lütfen seçiniz...</option>
+                <option value="1">İstanbul</option>
+                <option value="2">Ankara</option>
+                <option value="3">İzmir</option>
+                <option value="4">Bursa</option>
+            </select>
+            <br/><br/>
+            Fiyat <input type="text" name="dblFiyat" size="20" maxlength="5">
+            <br/><br/>
+            KDV Oranı <input type="text" name="dblKDV" size="20" maxlength="2" onblur="javascript:toplamHesapla();">
+            <br/><br/>
+            Toplam <input type="text" name="dblToplam" size="20" maxlength="5">
+            <br/><br/>
+            <input type="button" name="btnSubmit" value="Gönder" onclick="javascript:clickME();">
+        </form>
+    </center>
+</body>
+</html>
