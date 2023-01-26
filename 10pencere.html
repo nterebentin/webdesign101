@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Window</title>
+    <script language="JavaScript">
+        function openNew()
+        {
+          //  alert(window.screen.width); sizin ekran genişliğinizi alır
+          //  return false;  akışı durdurur, kodu burada keser
+            window.open("11.html","Yeni Pencere","height=500 width=400, top=440, left=340");
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+    <input type="text" name="txtName" size="20">
+    <input type="button" name="btn1" value="Pencere Aç" onclick="openNew()">
+    </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+         
+        function printStars()
+        {
+            var yukseklik = document.form1.intYukseklik.value;
+            
+            var txtStars="";
+            for(var i = 1; i<yukseklik; i++)
+            {
+                for(j = 1; j<i; j++)
+                {
+                    txtStars = txtStars + "*";
+                }
+                txtStars = txtStars + "<br>"
+            }
+          document.getElementById("star").innerHTML = txtStars;
+        }    
+    </script>
+</head>
+
+<body>
+    <form name="form1">
+        Üçgen Yüksekliği: <input type="text" name="intYukseklik" size="20">
+        <input type="button" name="btnSubmit" value="Gönder" onclick="javascript:printStars();">
+        <p id="star"></p>
+    </form>
+
+    
+</body>
+</html>

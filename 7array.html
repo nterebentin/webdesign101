@@ -8,9 +8,26 @@
 </head>
 <body>
     <script>
-        const cars = ["Saab", "Volvo", "BMW"];
+        const cars = ["Saab", "Volvo", "BMW","Mercedes"];
         document.write(cars[1]);
+        document.write("<br/>" + cars.length);
+        document.write("<br/>"+ cars[cars.length-1]);
+
+        const bikes = new Array("Salcano", "Bianchi","Btwin");
+        bikes.push("BMX"); //array'e yeni bir member ekleyelim
+
+        document.write("<br/>" + bikes[0]);
+        bikes.sort(); //array'i sort eden yani sıralayan metod
+        var i;  
+        for(i = 0; i<bikes.length; i++) //dinamik olarak array'in bütün elementlerini okur
+        {
+            document.write("</br>" + bikes[i]);
+        }
 
     </script>
+
+     
+
+    
 </body>
 </html>
