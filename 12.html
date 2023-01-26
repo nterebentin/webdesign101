@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        
+        function openGender()
+        {
+           $(document).ready(function(){
+             $("input[type='button']").click(function(){
+                 var deger= $("input[name='cinsiyet']:checked").val();
+               if(deger){
+             window.alert("Cinsiyetiniz: " + deger);
+            }
+        });
+        
+    });
+}
+            
+        function openJob()
+        {
+            window.open();
+        }
+        function openDaire()
+        {
+            window.open();
+        }
+
+    </script>
+</head>
+<body>
+    <form name="form1">
+    <br/><br/> Cinsiyetiniz: 
+    <p> 
+        <label><input type="radio" name="cinsiyet" value="erkek">Erkek</label> 
+        <label><input type="radio" name="cinsiyet" value="kadin">Kadın</label>
+    </p>
+    <p><input type="button" value="Seçileni Göster"></p>
+    <br/><br/> Mesleğiniz: 
+     <select name="drpMeslek">
+         <option value="1">Mühendis</option>
+         <option value="2">Doktor</option>
+         <option value="3">Avukat</option>
+         <option value="4">Öğretmen</option>
+         <option value="5">Polis</option>
+         <input type="button" name="btn1" value="Gönder" onclick="openJob()">
+     </select>
+     <br/><br/> Daire Türü: 
+     <input type="checkbox" name="chkDaireTuru" value="1">1+1  
+     <input type="checkbox" name="chkDaireTuru" value="2">2+1
+     <input type="checkbox" name="chkDaireTuru" value="3">3+1
+     <input type="checkbox" name="chkDaireTuru" value="4">4+1
+     <input type="button" name="btn1" value="Gönder" onclick="openDaire()">
+     <br/><br/> 
+    </form>
+</body>
+</html>
