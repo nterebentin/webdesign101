@@ -6,6 +6,7 @@
 </head>
 <body>
     <p id="demo"></p>
+    
      <script>
          const NorthwindOrderTable = {
             OrderID : "10248",
@@ -23,7 +24,8 @@
                 ProductID : "11",
                 UnitPrice : "14",
                 Quantity : "12",
-                Discount : "0"                
+                Discount : "0"       
+
             }
             ]
          }
@@ -31,6 +33,7 @@
          // myJSONString yukarıdaki nesneyi JSON.stringify metodu ile JSON'a dönüştürülmüş olarak tutar
          const myJSONString = JSON.stringify(NorthwindOrderTable);  
          document.getElementById('demo').innerHTML = myJSONString;
+
      </script>   
 </body>
 </html>
