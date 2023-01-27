@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+     <script>
+         const NorthwindOrderTable = {
+            OrderID : "10248",
+            CustomerID : "VINET",
+            EmployeeID : "5",
+            OrderDate : "1996-07-04",
+            RequiredDate : "1996-08-01",
+            OrderDetails : [{
+                ProductID : "1",
+                UnitPrice : "100",
+                Quantity : "37",
+                Discount : "0"
+            },
+            {
+                ProductID : "11",
+                UnitPrice : "14",
+                Quantity : "12",
+                Discount : "0"                
+            }
+            ]
+         }
+
+         // myJSONString yukarıdaki nesneyi JSON.stringify metodu ile JSON'a dönüştürülmüş olarak tutar
+         const myJSONString = JSON.stringify(NorthwindOrderTable);  
+         document.getElementById('demo').innerHTML = myJSONString;
+     </script>   
+</body>
+</html>
