@@ -23,6 +23,7 @@
         function openJob()
         {
             var meslek = document.getElementById("meslek");
+<<<<<<< HEAD
             var selectedvalue= meslek.options[meslek.selectedIndex].value;
             var selectedtext = meslek.options[meslek.selectedIndex].text;
             document.getElementById("seçim2").innerHTML = "Seçilen: " + selectedvalue + " - " + selectedtext;
@@ -36,7 +37,22 @@
         if(document.getElementById('flat3').checked) secim += document.getElementById('flat3').value + " " + "3+1";
         if(document.getElementById('flat4').checked) secim += document.getElementById('flat4').value + " " + "4+1";
         document.getElementById("seçim3").innerHTML = "Seçilen Daireler: " + secim + " " + " "  
+=======
+            var secilendeger = meslek.options[meslek.selectedIndex].selectedValue;
+            var selectedText = career.options[meslek.selectedIndex].selectedText;
+            document.getElementById("seçim2").innerHTML = "Seçilen: " + selectedValue + " - " + selectedText;
         }
+        function openFlat()
+        {
+            var secim= "";
+        if(document.getElementById('flat1').checked) secim += document.getElementById('flat1').value + " ";
+        if(document.getElementById('flat2').checked) secim += document.getElementById('flat2').value + " ";
+        if(document.getElementById('flat3').checked) secim += document.getElementById('flat3').value + " ";
+        if(document.getElementById('flat4').checked) secim += document.getElementById('flat4').value + " ";
+        document.getElementById("seçim3").innerHTML = "Seçilen Daireler: " + secim;
+>>>>>>> ca94b27874eff2c8f6504f555ffb03fe70981eb0
+        }
+    
 
     </script>
 </head>
