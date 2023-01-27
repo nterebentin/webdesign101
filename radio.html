@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Radio Örnek</title>
+        <script language="JavaScript">
+            function readRadio()
+            {
+                var radioList = document.getElementsByName("rdGender");
+                var result = "Seçilmedi";
+                for(var i=0; i<radioList.length; i++)
+                {
+                    if (radioList[i].checked==true)
+                    {
+                        //var result2 = radioList[i].labels[0].textcontent;
+                        result = radioList[i].nextElementSibling.innerHTML;
+                        //result = radioList[i].labels[0].textcontent; 
+                        break;
+                    }  
+                    else
+                    {
+                        continue;
+                    }     
+
+                } 
+                window.alert(result);
+                return false;
+
+            }
+
+            function readCheck()
+            {
+                var checkList = document.getElementsByName("chkSecim");
+                var resultCheck = "";
+                
+                for(var i=0; i<checkList.length; i++)
+                {
+                    if (checkList[i].checked==true)
+                    {                        
+                        if (resultCheck == "")
+                        {
+                            resultCheck = checkList[i].nextElementSibling.innerHTML;
+                        }
+                        else
+                        {
+                            resultCheck += ", " + checkList[i].nextElementSibling.innerHTML;
+                        }
+
+                        //break;
+                    }  
+                    else
+                    {
+                        continue;
+                    }     
+
+                }                 
+                window.alert(resultCheck);
+                return false;
+
+            }            
+        </script>
+    </head>
+
+    <body>
+        <center>
+            <form name="form1">
+                <br/><br/>
+                <input type="checkbox" name="chkSecim" id="chkSecim1" value="1" /><label for="chkSecim1" id="rdSecim1">C#</label>
+                <input type="checkbox" name="chkSecim" id="chkSecim2" value="2" /><label for="chkSecim2" id="rdSecim2">SQL</label>
+                <input type="checkbox" name="chkSecim" id="chkSecim3" value="3" /><label for="chkSecim3" id="rdSecim3">HTML</label>
+                <input type="checkbox" name="chkSecim" id="chkSecim4" value="4" /><label for="chkSecim4" id="rdSecim4">JavaScript</label>
+                <br/><br/>       
+
+                <input type="radio" name="rdGender" id="rdGender1" value="1" /><label for="rdGender1" id="labelGender1">Kadın</label>
+                <input type="radio" name="rdGender" id="rdGender2" value="2" /><label for="rdGender2" id="labelGender2">Erkek</label>
+                <br/><br/>
+
+
+                <input type="button" name="button1" id="button1" onclick="readRadio();" value="Radio Oku"/>
+                <input type="button" name="button2" id="button2" onclick="readCheck();" value="Check Oku"/>
+                
+            </form>                
+        </center>
+    </body>
+
+</html>
