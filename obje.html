@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="nesne, obje, class, object" />
+        <title>Nesnelere Giriş</title>        
+        <script language="JavaScript">
+            function loadObject()
+            {
+                  const person = {}; // yeni bir nesne oluşturmak
+                  // alternatif olarak bu şekilde de yazılabiliyor: const person = new Object();
+                     
+                  person.FirstName = "Onur";
+                  person.Classroom = "Sabah Grubu";  
+
+                  const person2 = {
+                    FirstName : "Fırat",
+                    Classroom : "Sabah Grubu",
+                    Address : 
+                        {
+                            text : "1 Sok. No:2 D:2",
+                            postalCode : "35500",
+                            city : "İzmir"        
+                        } 
+                    }; 
+
+                    let personDetails = person2.FirstName + "'ın Adresi, <br/>" + person2.Address.text;
+                    document.getElementById('myObject').innerHTML = personDetails;
+                    //document.getElementById('myObject').innerHTML = person2.FirstName + " " + person2.Classroom + " sınıfındadır!";
+            }
+
+        </script>
+    </head>
+
+    <body onload="loadObject();">
+        <p id="myObject"></p>
+
+    </body>
+
+</html>
