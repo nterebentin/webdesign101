@@ -5,9 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script language="JavaScript">
+        function format()
+        { 
+            let ad= document.form1.txtAd.value;
+            let soyad = document.form1.txtSoyad.value; 
+        
+            let value1=ad.substring(1,3);
+            let value2= soyad.substr(soyad.length-1,1);
+        
+            sonuc= value1 + "<br/>" + value2;
+
+
+            document.getElementById("yaz").innerHTML= sonuc
+
+        }
+    </script>
 </head>
 <body>
-    <input type="text" name="btnW1" value="kapat">
-    
+    <form name="form1">
+        Adınız:
+        <input type="text" name="txtAd"   /> 
+        
+        
+        <br /><br />
+        Soyadınız:
+        <input type="text" name="txtSoyad" /> 
+        <input type="button" value="Kaydet" onclick="format();" />
+        <p Id="yaz"></p> 
+        
+        
 </body>
 </html>
