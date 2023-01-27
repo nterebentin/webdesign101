@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="nesne, obje, class, object" />
+        <title>Nesneler Constructorlar</title>        
+
+    </head>
+
+    <body>
+        <p id="myObject"></p>
+        
+        <script>
+            function Person(namePar, surnamePar, agePar)        // Constructor metod
+            {
+                this.FirstName = namePar;   // bu nesnenin FirstName adlı property'sini namePar parametresinden oku
+                this.LastName = surnamePar; // bu nesnenin LastName adlı property'sini surnamePar parametresinden oku
+                this.Age = agePar; // bu nesnenin Age adlı property'sini agePar parametresinden oku
+            }        
+
+            // eski kullanım şu şekilde idi : const myMother = new Object();
+            // Parametreli constructor kullanarak yeni bir Person nesnesi oluştur            
+            const myMother = new Person("Ayşe", "Kaya", 50);    
+            const myFather = new Person("Ali", "Kaya", 60); 
+
+            let myString = "Anne : " + myMother.FirstName + " " + myMother.LastName + " " + myMother.Age;
+
+            document.getElementById('myObject').innerHTML = myString;
+
+        </script>
+        
+
+    </body>
+
+</html>
