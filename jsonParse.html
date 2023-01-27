@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+     <script>
+         const NorthwindJSON = `{
+            "OrderID": "10248",
+            "CustomerID": "VINET",
+            "EmployeeID": "5",
+            "OrderDate": "1996-07-04",
+            "RequiredDate": "1996-08-01",
+            "OrderDetails": [
+                {
+                "ProductID": "1",
+                "UnitPrice": "100",
+                "Quantity": "37",
+                "Discount": "0"
+                },
+                {
+                "ProductID": "11",
+                "UnitPrice": "14",
+                "Quantity": "12",
+                "Discount": "0"
+                }
+            ]
+            }`
+
+         // myJSONObject yukarıdaki JSON string'ini JSON.parse metodu ile objeye dönüştürülmüş olarak tutar
+         // ve JSON dosyasının içindeki alan ve alt kısımları sorgulayabilir hale getirir.
+
+         const myJSONObject = JSON.parse(NorthwindJSON);  
+         document.getElementById('demo').innerHTML = myJSONObject.OrderID + " " + myJSONObject.OrderDetails[0].ProductID;
+     </script>   
+</body>
+</html>
