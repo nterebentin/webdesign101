@@ -9,25 +9,34 @@
         
         function openGender()
         {
-           $(document).ready(function(){
-             $("input[type='button']").click(function(){
-                 var deger= $("input[name='cinsiyet']:checked").val();
-               if(deger){
-             window.alert("Cinsiyetiniz: " + deger);
-            }
-        });
-        
-    });
-}
-            
+            var result = document.getElementById("seçim1");
+                if (document.getElementById("kadın").checked) 
+                {
+                   result.innerHTML = "Kadın seçildi";
+                }
+                else if (document.getElementById("erkek").checked) 
+                {
+                    result.innerHTML = "Erkek seçildi";
+                }
+        }
+
         function openJob()
         {
-            window.open();
+            var meslek = document.getElementById("meslek");
+            var secilendeger = meslek.options[meslek.selectedIndex].selectedValue;
+            var selectedText = career.options[meslek.selectedIndex].selectedText;
+            document.getElementById("seçim2").innerHTML = "Seçilen: " + selectedValue + " - " + selectedText;
         }
-        function openDaire()
+        function openFlat()
         {
-            window.open();
+            var secim= "";
+        if(document.getElementById('flat1').checked) secim += document.getElementById('flat1').value + " ";
+        if(document.getElementById('flat2').checked) secim += document.getElementById('flat2').value + " ";
+        if(document.getElementById('flat3').checked) secim += document.getElementById('flat3').value + " ";
+        if(document.getElementById('flat4').checked) secim += document.getElementById('flat4').value + " ";
+        document.getElementById("seçim3").innerHTML = "Seçilen Daireler: " + secim;
         }
+    
 
     </script>
 </head>
@@ -35,26 +44,30 @@
     <form name="form1">
     <br/><br/> Cinsiyetiniz: 
     <p> 
-        <label><input type="radio" name="cinsiyet" value="erkek">Erkek</label> 
-        <label><input type="radio" name="cinsiyet" value="kadin">Kadın</label>
+        <input type="radio" id="kadın" name="rdCinsiyet" value="kadın">Kadın
+        <label><input type="radio" id="erkek" name="rdCinsiyet" value="erkek">Erkek
     </p>
-    <p><input type="button" value="Seçileni Göster"></p>
+    <p><input type="button" value="Seçilen Cinsiyeti Göster" onclick="openGender()"></p>
+    <p id="seçim1"></p>
+
     <br/><br/> Mesleğiniz: 
-     <select name="drpMeslek">
+     <select name="drpMeslek" id="meslek">
          <option value="1">Mühendis</option>
          <option value="2">Doktor</option>
          <option value="3">Avukat</option>
          <option value="4">Öğretmen</option>
          <option value="5">Polis</option>
-         <input type="button" name="btn1" value="Gönder" onclick="openJob()">
+         <input type="button" name="btn1" value="Seçilen Mesleği Göster" onclick="openJob()">
      </select>
+     <p id="seçim2"></p>
+
      <br/><br/> Daire Türü: 
-     <input type="checkbox" name="chkDaireTuru" value="1">1+1  
-     <input type="checkbox" name="chkDaireTuru" value="2">2+1
-     <input type="checkbox" name="chkDaireTuru" value="3">3+1
-     <input type="checkbox" name="chkDaireTuru" value="4">4+1
-     <input type="button" name="btn1" value="Gönder" onclick="openDaire()">
-     <br/><br/> 
+     <input type="checkbox" id="flat1" name="chkDaireTuru" value="1">1+1  
+     <input type="checkbox" id="flat2" name="chkDaireTuru" value="2">2+1
+     <input type="checkbox" id="flat3" name="chkDaireTuru" value="3">3+1
+     <input type="checkbox" id="flat4" name="chkDaireTuru" value="4">4+1
+     <input type="button" name="btn1" value="Seçilenleri Göster" onclick="openFlat()">
+     <p id="seçim3"></p>
     </form>
 </body>
 </html>
