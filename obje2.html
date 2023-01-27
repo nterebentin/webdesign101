@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="nesne, obje, class, object" />
+        <title>Nesneler 2. Kısım</title>        
+        <script language="JavaScript">
+            function loadObject()
+            {
+                  const person2 = {
+                        FirstName : "Fırat",
+                        LastName : "Kaya",
+                        Classroom : "Sabah Grubu",
+                        Address : 
+                        {
+                            text : "1 Sok. No:2 D:2",
+                            postalCode : "35500",
+                            city : "İzmir"        
+                        }                         
+                    }; 
+
+                    //document.getElementById('myObject').innerHTML = person2.FirstName + " "  + person2["LastName"]; 
+                    // obje.property şeklinde de veya obje["property"] şeklinde de yazılabilir 
+                    
+                    var myList = "";
+
+                    for (var x in person2)  // person2'nin içindeki tüm property'leri tek tek bul
+                    {
+                        if (typeof person2[x]!="object" )
+                        {
+                            myList += "<br/>" + person2[x]; // person2["LastName"] bu şekilde okur gibi yaptık..                        
+                        }                        
+                    }
+
+                    for (var y in person2.Address)  // person2nin adddress'i içindeki tüm property'leri tek tek bul
+                    {
+                        myList += "<br/>" + person2.Address[y];                        
+                    }
+
+                    document.getElementById('myObject').innerHTML = myList;
+
+            }
+
+        </script>
+    </head>
+
+    <body onload="loadObject();">
+        <p id="myObject"></p>
+
+    </body>
+
+</html>
