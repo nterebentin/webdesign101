@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="nesne, obje, class, object" />
+        <title>Nesneler Metodlar</title>        
+        <script language="JavaScript">
+            function loadObject()
+            {
+                  const myCar = {
+                        Marka : "Mercedes",
+                        Model : "E200",
+                        Renk : "Siyah",
+                        SasiNo : "XBNDHSGDSH10109",
+                        Calistir : function()
+                        {
+                            return "Araba Calisti!";
+                        }
+                    }; 
+                
+                    let myString = myCar.Marka + "<br/>" + myCar.Model + "<br/>" + myCar.Calistir();
+                    document.getElementById('myObject').innerHTML = myString;
+
+            }
+
+        </script>
+    </head>
+
+    <body onload="loadObject();">
+        <p id="myObject"></p>
+
+    </body>
+
+</html>
